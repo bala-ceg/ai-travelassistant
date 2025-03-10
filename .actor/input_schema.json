@@ -1,0 +1,23 @@
+{
+  "title": "AI Travel Assistant",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "query": {
+      "title": "Query",
+      "type": "string",
+      "description": "Query for the agent.",
+      "editor": "textfield",
+      "prefill": "plan a trip to bali from paris next month",
+      "default": "plan a trip to bali from paris next month"
+    },
+    "debug": {
+      "title": "Debug",
+      "type": "boolean",
+      "description": "If enabled, the Actor will run in debug mode and produce more output.",
+      "editor": "checkbox",
+      "default": false
+    }
+  },
+  "required": ["query"]
+}

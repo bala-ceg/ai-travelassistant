@@ -1,0 +1,67 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "query",
+          "departure_airport",
+          "arrival_airport",
+          "departure_date",
+          "return_date",
+          "destination",
+          "flights_info",
+          "hotels_info",
+          "sights_info",
+          "itinerary"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "query": {
+            "label": "User Query",
+            "format": "text"
+          },
+          "departure_airport": {
+            "label": "Departure Airport",
+            "format": "text"
+          },
+          "arrival_airport": {
+            "label": "Arrival Airport",
+            "format": "text"
+          },
+          "departure_date": {
+            "label": "Departure Date",
+            "format": "date"
+          },
+          "return_date": {
+            "label": "Return Date",
+            "format": "date"
+          },
+          "destination": {
+            "label": "Destination",
+            "format": "text"
+          },
+          "flights_info": {
+            "label": "Flights Info",
+            "format": "object"
+          },
+          "hotels_info": {
+            "label": "Hotels Info",
+            "format": "object"
+          },
+          "sights_info": {
+            "label": "Sights Info",
+            "format": "object"
+          },
+          "itinerary": {
+            "label": "Generated Itinerary",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}
