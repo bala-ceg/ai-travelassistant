@@ -270,17 +270,18 @@ async def save_report(state):
 async def main():
     """Runs the AI Travel Planner workflow."""
     async with Actor:
-        await Actor.charge('actor-start')
+        
 
         actor_input = await Actor.get_input() or {}
         Actor.log.info(f"Received input: {actor_input}")
+
+        await charge_for_actor_start()
 
         travel_query = TravelState(**actor_input)
 
         # Execute workflow
         final_state = travel_workflow.invoke(travel_query)
         Actor.log.info(f"Workflow completed. Final state: {final_state}")
-        await Actor.charge('task-completed')
         # Save the final report
         await save_report(final_state)
 
