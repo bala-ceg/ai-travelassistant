@@ -275,7 +275,7 @@ async def main():
         actor_input = await Actor.get_input() or {}
         Actor.log.info(f"Received input: {actor_input}")
 
-        await charge_for_actor_start()
+        asyncio.create_task(charge_for_actor_start())
 
         travel_query = TravelState(**actor_input)
 
